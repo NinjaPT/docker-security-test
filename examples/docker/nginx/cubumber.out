@@ -1,0 +1,277 @@
+[
+  {
+    "uri": "features/docker_build.feature",
+    "id": "docker-build",
+    "keyword": "Feature",
+    "name": "Docker build",
+    "description": "  To confirm that the Dockerfile builds without error.",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "The \"docker\" binary exists.",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1682515
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "a \"Dockerfile\" file is present.",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1289815
+            }
+          }
+        ]
+      },
+      {
+        "id": "docker-build;run-docker-build",
+        "keyword": "Scenario",
+        "name": "Run Docker build",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I build the Dockerfile.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/docker_build_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171976925
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "a Docker image for this Dockerfile should exist.",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/docker_build_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2208613
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/packages.feature",
+    "id": "packages",
+    "keyword": "Feature",
+    "name": "Packages",
+    "description": "  To confirm that the Docker image does not contain packages that could affect\n  the security of the container.\n\n  As a developer\n  I want to harden my VM.\n  So that it has less attack vectors.",
+    "line": 2,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 10,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "The \"docker\" binary exists.",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154682
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "a \"Dockerfile\" file is present.",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1424012
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "a Docker image has been built.",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 185162053
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "a container is running.",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 785809710
+            }
+          }
+        ]
+      },
+      {
+        "id": "packages;remove-packages",
+        "keyword": "Scenario",
+        "name": "Remove packages",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the following packages should not be installed:",
+            "line": 17,
+            "rows": [
+              {
+                "cells": [
+                  "gcc"
+                ]
+              },
+              {
+                "cells": [
+                  "make"
+                ]
+              },
+              {
+                "cells": [
+                  "git"
+                ]
+              },
+              {
+                "cells": [
+                  "telnet"
+                ]
+              },
+              {
+                "cells": [
+                  "telnet-server"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/packages_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1248447196
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 10,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "The \"docker\" binary exists.",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 141392
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "a \"Dockerfile\" file is present.",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 999137
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "a Docker image has been built.",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160544058
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "a container is running.",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 871019318
+            }
+          }
+        ]
+      },
+      {
+        "id": "packages;stop-containers",
+        "keyword": "Scenario",
+        "name": "Stop Containers",
+        "description": "",
+        "line": 24,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "stop containers.",
+            "line": 25,
+            "output": [
+              "4e0c746cc4219c175ea612b4c9c7d714720afec81f13fe23aa72ad6f684d7265"
+            ],
+            "match": {
+              "location": "features/step_definitions/generic_docker_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 863409331
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
