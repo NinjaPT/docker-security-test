@@ -1,0 +1,18 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+before_install:
+- docker build -t luismsousa/docker-security-test .
+
+before_script:
+- cd examples/docker/nginx
+script:
+- docker run --rm -it -v $(pwd)/Dockerfile:/dockerdir/Dockerfile -v /var/run/docker.sock:/var/run/docker.sock -w /dockerdir luismsousa/docker-security-test rake
+- rake CUCUMBER_OPTS="features --format pretty --guess"
+
+after_script:
+- docker rm -f $(docker ps -a -q --filter 'name=container-to-delete')
