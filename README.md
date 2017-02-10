@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/luismsousa/docker-security-test.svg?branch=master)](https://travis-ci.org/luismsousa/docker-security-test) [![Code Climate](https://codeclimate.com/github/luismsousa/docker-security-test/badges/gpa.svg)](https://codeclimate.com/github/luismsousa/docker-security-test)
+
 # Docker Security Test
 ## BDD Security Testing
 The purpose of this repository is to define a generic set of feature files that can be used to test Docker images/containers.
