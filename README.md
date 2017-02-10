@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/luismsousa/docker-security-test.svg?branch=master)](https://travis-ci.org/luismsousa/docker-security-test) [![Code Climate](https://codeclimate.com/github/luismsousa/docker-security-test/badges/gpa.svg)](https://codeclimate.com/github/luismsousa/docker-security-test)
+[![Build Status](https://travis-ci.org/luismsousa/docker-security-test.svg?branch=master)](https://travis-ci.org/luismsousa/docker-security-test) [![Code Climate](https://codeclimate.com/github/luismsousa/docker-security-test/badges/gpa.svg)](https://codeclimate.com/github/luismsousa/docker-security-test) [![Issue Count](https://codeclimate.com/github/luismsousa/docker-security-test/badges/issue_count.svg)](https://codeclimate.com/github/luismsousa/docker-security-test)
 
 # Docker Security Test
 ## BDD Security Testing
