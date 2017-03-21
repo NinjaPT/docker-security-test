@@ -22,6 +22,7 @@ Given(/^a container is running\.$/) do
   )
 
   @container.start
+  puts @container.id
 end
 
 
