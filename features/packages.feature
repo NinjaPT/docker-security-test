@@ -14,12 +14,10 @@ Background:
   And a container is running.
 
 Scenario: Remove packages
-Then the following packages should not be installed:
+  Then the following packages should not be installed:
   | gcc           |
   | make          |
   | git           |
   | telnet        |
   | telnet-server |
-
-Scenario: Stop Containers
   Then stop containers.

@@ -11,10 +11,9 @@ Background:
 Scenario: Ports Listening
 Then the following ports should be listening:
   | port | protocol |
+  Then stop containers.
 
 Scenario: Ports Not Listening
   Then the following ports should not be listening:
     | port | protocol |
-
-Scenario: Stop Containers
   Then stop containers.
