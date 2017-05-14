@@ -4,6 +4,9 @@
 ## BDD Security Testing
 The purpose of this repository is to define a generic set of feature files that can be used to test Docker images/containers.
 
+## Docker image
+Docker Hub: https://hub.docker.com/r/luismsousa/docker-security-test/
+
 ## Stucture
 The repository can be broken down into the following:
 
