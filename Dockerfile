@@ -1,8 +1,7 @@
 FROM jmccann/drone-chefdk:1.1.16
 
-RUN gem install cucumber serverspec docker-api --no-ri --no-rdoc --no-document
-
-RUN mkdir -p /dockerdir
+RUN gem install cucumber serverspec docker-api --no-ri --no-rdoc --no-document && \
+	mkdir -p /dockerdir
 
 WORKDIR /dockerdir
 
